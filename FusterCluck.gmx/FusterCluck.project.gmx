@@ -10,7 +10,21 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_Template</object>
+    <object>objects\Control</object>
+    <object>objects\obj_Player</object>
+    <object>objects\obj_Gun</object>
+    <object>objects\obj_Egg</object>
+    <object>objects\obj_Enemy</object>
+    <object>objects\obj_Key</object>
+    <object>objects\obj_Hole</object>
+    <object>objects\obj_WeightSensor</object>
+    <object>objects\obj_Projectile</object>
+    <object>objects\obj_Door</object>
+    <object>objects\obj_SecurityCam</object>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_Init</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
