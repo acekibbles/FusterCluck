@@ -26,6 +26,26 @@
           <argument>
             <kind>1</kind>
             <string>///Colton
+
+randomize();
+///Pre-Game Variables
+tilescale = 32;
+globalvar devmode; devmode = true;
+event = 1;
+newevent = 1;
+lastevent = 0;
+console = false;
+shadows = false;
+//camera
+viewdist = 3;
+viewx = 0;
+viewy = 0;
+viewx2 = 0;
+viewy2 = 0;
+shake = 0;
+
+//dialogue
+scr_Dialogue();
 </string>
           </argument>
         </arguments>
@@ -91,6 +111,95 @@
           <argument>
             <kind>1</kind>
             <string>///Matt
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Camera
+
+scr_Camera(event);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Devmode Stuff
+
+if(devmode){
+
+if(!console){
+if(keyboard_check(ord('C'))){
+keyboard_string = 0;
+console = true;
+}}
+
+
+if(console){
+if(keyboard_check(vk_enter)){
+input = keyboard_string;
+scr_Console(input);
+console = false;
+}}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//draw_text(room_width/2,room_height/2,event);
+if(console){
+draw_text(view_xview[0] + 32,view_yview[0]+32,keyboard_string);
+}
+
+//draw_text(x,y+50,room);
 </string>
           </argument>
         </arguments>
